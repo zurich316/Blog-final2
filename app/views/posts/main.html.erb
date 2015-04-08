@@ -1,0 +1,14 @@
+<h1>MAIN</h1>
+
+<% @posts.each do |post| %>
+
+  <h1><a href="/posts/<%=post.id%>"><%= post.titulo %></a></h1>
+  <%= post.contenido %>
+  <h3>Likes:<%= post.likes %></h3>
+  <p><a href="/posts/<%=post.id%>/like">Like this</a> </p>
+  <br>
+  <%= post.created_at %>
+<br><br>
+<%end%>
+<br>
+<a href="/posts">Go to Admin</a>
